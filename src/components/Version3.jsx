@@ -12,12 +12,21 @@ function App() {
     setResult("");
   }
   function handleBackSpace() {
-
+    setResult(result.slice(0,-1));
+  }
+  function handleResult() {
+    try {
+      setResult(eval(result).toString());
+    }
+    catch(err) {
+      setResult("Error");
+      
+    }
   }
 
   return (
     <div>
-      
+
     <div className='container'>
       <form>
         <input type='text' value={result}></input>
@@ -42,7 +51,7 @@ function App() {
       <button name = '+'onClick={handleClick}>+</button>
       <button name = '0'onClick={handleClick}>0</button>
       <button name = '.'onClick={handleClick}>.</button>
-      <button onClick={handleClick} id="answer">=</button>
+      <button onClick={handleResult} id="answer">=</button>
     </div>
 
     </div>
