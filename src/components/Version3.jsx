@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Styles from './Styles.css'
 
 function App() {
   const [result, setResult] = useState(0);
