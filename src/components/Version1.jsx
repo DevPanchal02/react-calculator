@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Styles from './Styles.css'
 
-export default function Version3() {
+export default function Version1() {
   const [result, setResult] = useState("");
 
   function handleClick (e) {
@@ -14,14 +14,39 @@ export default function Version3() {
     setResult(result.slice(0,-1));
   }
   function handleResult() {
-    try {
-      setResult(eval(result).toString());
-    }
-    catch(err) {
-      setResult("Error");
+    let values = result.split(/[\+\-\*\/]/);
+    let operators = result.replace(/[0-9]/g, '').split('');
 
+    let currentValue = Number(values[0]);
+
+    for (let i = 0; i < operators.length; i++) {
+      let nextValue = Number(values[i + 1]);
+
+      switch (operators[i]) {
+        case '+':
+          currentValue += nextValue;
+          break;
+        case '-':
+          currentValue -= nextValue;
+          break;
+        case '*':
+          currentValue *= nextValue;
+          break;
+        case '/':
+          if (nextValue === 0) {
+            setResult("Error");
+            return;
+          }
+          currentValue /= nextValue;
+          break;
+        default:
+          setResult("Error");
+          return;
+      }
     }
+    setResult(currentValue.toString());
   }
+
 
   return (
     <div>
