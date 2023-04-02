@@ -17,6 +17,7 @@ function App() {
 
   return (
     <div>
+      
     <div className='container'>
       <form>
         <input type='text' value={result}></input>
@@ -24,7 +25,7 @@ function App() {
     </div>
 
     <div className='keypad'>
-      <button onClick={handleClear} id='clear'>Clear</button>
+      <button onClick={handleClear} id="clear">Clear</button>
       <button onClick={handleBackSpace} id='backspace'>C</button>
       <button name = '/'onClick={handleClick}>&divide;</button>
       <button name = '7'onClick={handleClick}>7</button>
@@ -41,7 +42,7 @@ function App() {
       <button name = '+'onClick={handleClick}>+</button>
       <button name = '0'onClick={handleClick}>0</button>
       <button name = '.'onClick={handleClick}>.</button>
-      <button onClick={handleClick}>=</button>
+      <button onClick={handleClick} id="answer">=</button>
     </div>
 
     </div>
