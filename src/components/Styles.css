@@ -91,7 +91,37 @@ input[type='text'] {
     background-color: #5448fa;
   }
 
+
 .keypad button:hover {
   color:#00fad4;
   background-color: #212121;
 }
+.buttonLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .buttonLinks button {
+    width: 30%;
+    padding: 5px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .buttonLinks button:hover {
+    color:#5700fa;
+    background-color: #212121;
+  }
