@@ -50,16 +50,20 @@ export default function Version1() {
 
     return (
         <div>
-
-            <div className='buttonLinks'>
-                <button className='calcButton' onClick={() => { window.location = '/' }}>Basic Calculator</button>
-                <button className='calcButton' onClick={() => { window.location = '/ver2' }}>RPN Calculator</button>
-                <button className='calcButton' onClick={() => { window.location = '/ver3' }}>Complex Calculator</button>
+    
+            <div className='info'>
+                Basic Calculator
             </div>
             <div className='container'>
                 <form>
                     <input type='text' value={result}></input>
                 </form>
+            </div>
+
+            <div className='buttonLinks'>
+                <button className='calcButton' onClick={() => { window.location = '/' }}>Basic Calculator</button>
+                <button className='calcButton' onClick={() => { window.location = '/ver2' }}>RPN Calculator</button>
+                <button className='calcButton' onClick={() => { window.location = '/ver3' }}>Complex Calculator</button>
             </div>
 
             <div className='keypad'>

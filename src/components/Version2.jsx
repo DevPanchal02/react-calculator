@@ -57,10 +57,8 @@ export default function Version3() {
 
     return (
         <div>
-            <div className='buttonLinks'>
-                <button className='calcButton' onClick={() => { window.location = '/' }}>Basic Calculator</button>
-                <button className='calcButton' onClick={() => { window.location = '/ver2' }}>RPN Calculator</button>
-                <button className='calcButton' onClick={() => { window.location = '/ver3' }}>Complex Calculator</button>
+            <div className='info'>
+                RPN Calculator
             </div>
             <div className='container'>
                 <form>
@@ -68,9 +66,14 @@ export default function Version3() {
                 </form>
             </div>
 
+            <div className='buttonLinks'>
+                <button className='calcButton' onClick={() => { window.location = '/' }}>Basic Calculator</button>
+                <button className='calcButton' onClick={() => { window.location = '/ver2' }}>RPN Calculator</button>
+                <button className='calcButton' onClick={() => { window.location = '/ver3' }}>Complex Calculator</button>
+            </div>
             <div className='keypad'>
                 <button onClick={() => handleClear()} id='backspace'>C</button>
-                <button onClick={() => handleAllClear() } id="clear">Clear</button>
+                <button onClick={() => handleAllClear()} id="clear">Clear</button>
                 <button onClick={() => handleOperatorInput('/')}>&divide;</button>
                 <button onClick={() => handleNumberInput(7)}>7</button>
                 <button onClick={() => handleNumberInput(8)}>8</button>
